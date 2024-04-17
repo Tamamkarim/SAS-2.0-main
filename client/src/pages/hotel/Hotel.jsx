@@ -1,9 +1,7 @@
-import { useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import { useState } from 'react'
-import { Rate } from 'antd'
-import { Spin } from 'antd'
+import { Spin, Rate, Carousel, Form, Input, Button } from 'antd'
 
 const Hotel = () => {
   const { id } = useParams()
@@ -13,15 +11,36 @@ const Hotel = () => {
     axios
       .get(`http://localhost:8809/api/hotels/find/${id}`)
       .then((res) => setHotel(res.data))
-  }, [])
+  }, [id])
 
   if (!hotel) return <Spin />
+
+  const onFinish = (values) => {
+    console.log('Reservation details:', values);
+   
+  };
 
   return (
     <div className="flex flex-col m-4">
       <div>
         <p>{hotel.name}</p>
-        <img src={hotel.photos && hotel.photos[0]} alt="" />
+        <div style={{ width: '300px', height: '200px' }}>
+          <Carousel>
+            {hotel.photos.map((photo, index) => (
+              <div key={index} style={{ width: '100%', height: '100%' }}>
+                <img src={photo} alt={`Hotel ${index}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+            ))}
+            
+            <div style={{ width: '100%', height: '100%' }}>
+              <img src="/Pics/bedroom1.jpg" alt="Bedroom 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            <div style={{ width: '100%', height: '100%' }}>
+              <img src="/Pics/bedroom.jpg" alt="Bedroom 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            
+          </Carousel>
+        </div>
         <div className="flex gap-2">
           <p>{hotel.address}</p>
           <p>Rooms: {hotel.rooms.length}</p>
@@ -30,14 +49,59 @@ const Hotel = () => {
         </div>
         <p>{hotel.desc}</p>
       </div>
+      <div style={{ width: '300px', margin: 'auto' }}>
+        <h1>Reservation Form</h1>
+        <Form
+          name="reservation_form"
+          onFinish={onFinish}
+          layout="vertical"
+        >
+          <Form.Item
+            label="Name"
+            name="name"
+            rules={[{ required: true, message: 'Please enter your name' }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[{ required: true, message: 'Please enter your email' }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="Check-in Date"
+            name="checkInDate"
+            rules={[{ required: true, message: 'Please select check-in date' }]}
+          >
+            <Input type="date" />
+          </Form.Item>
+          <Form.Item
+            label="Check-out Date"
+            name="checkOutDate"
+            rules={[{ required: true, message: 'Please select check-out date' }]}
+          >
+            <Input type="date" />
+          </Form.Item>
+          <Form.Item>
+            <Button type="primary" htmlType="submit">
+              Reserve
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
       <div>
         <h1>Rooms</h1>
         {hotel.rooms &&
           hotel.rooms.map((room, index) => (
-            <div key={room}>
-              <Link to={`/room/${room}`}>
-                <p>Room {index}</p>
-              </Link>
+            <div key={index}>
+              <h2>Room {index + 1}</h2>
+              <p>Type: {room.type}</p>
+              <p>Price: {room.price}</p>
+              <p>Capacity: {room.capacity}</p>
+              
+              <hr />
             </div>
           ))}
       </div>
@@ -46,3 +110,4 @@ const Hotel = () => {
 }
 
 export default Hotel
+
