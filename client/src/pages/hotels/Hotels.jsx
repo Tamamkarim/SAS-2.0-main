@@ -2,7 +2,7 @@ import {Spin} from "antd";
 import Header from "components/header/Header";
 import { useEffect, useState, useRef } from "react";
 import Title from "antd/es/typography/Title";
-import './Hotels.css'
+import './hotels.css'
 import axios from "axios";
 
 const Hotels = () => {
