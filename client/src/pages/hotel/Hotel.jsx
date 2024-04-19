@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Spin, Rate, Carousel, Form, Input, Button } from 'antd'
-import './hotel.css'
+import './Hotel.css'
 
 const Hotel = () => {
   const { id } = useParams()
