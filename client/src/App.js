@@ -10,6 +10,7 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register"
 import { ConfigProvider, Layout } from "antd";
 import Navbar from "./components/navbar/Navbar";
+import Profile from "pages/profile/Profile";
 import Dashboard from "./pages/dashboard/Dashboard";
 import { ProtectedRoute, PublicRoute } from "./routes/route-helpers";
 import EditHotels from "./pages/dashboard/edit_hotels/EditHotels";
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
               </Route>
               <Route element={<ProtectedRoute />}>
+                <Route path="/profile" element={<Profile />}/>
                 <Route path="/dashboard" element={<Dashboard />}>
                   <Route path="edit-hotels" element={<EditHotels />} />
                 </Route>

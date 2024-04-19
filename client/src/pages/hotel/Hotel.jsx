@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Spin, Rate, Carousel, Form, Input, Button } from 'antd'
+import './hotel.css'
 
 const Hotel = () => {
   const { id } = useParams()
@@ -23,21 +24,21 @@ const Hotel = () => {
   return (
     <div className="flex flex-col m-4">
       <div>
-        <p>{hotel.name}</p>
-        <div style={{ width: '300px', height: '200px' }}>
+        <h1 className='m-4'>{hotel.name}</h1>
+        <div style={{ width: '500px', height: '400px' }}>
           <Carousel>
             {hotel.photos.map((photo, index) => (
               <div key={index} style={{ width: '100%', height: '100%' }}>
-                <img src={photo} alt={`Hotel ${index}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img className='hotel-image' src={photo} alt={`Hotel ${index}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             ))}
-            
+{/*             
             <div style={{ width: '100%', height: '100%' }}>
               <img src="/Pics/bedroom1.jpg" alt="Bedroom 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ width: '100%', height: '100%' }}>
               <img src="/Pics/bedroom.jpg" alt="Bedroom 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
+            </div> */}
             
           </Carousel>
         </div>
@@ -92,8 +93,8 @@ const Hotel = () => {
         </Form>
       </div>
       <div>
-        <h1>Rooms</h1>
-        {hotel.rooms &&
+        {/* <h1>Rooms</h1> */}
+        {/* {hotel.rooms &&
           hotel.rooms.map((room, index) => (
             <div key={index}>
               <h2>Room {index + 1}</h2>
@@ -103,7 +104,7 @@ const Hotel = () => {
               
               <hr />
             </div>
-          ))}
+          ))} */}
       </div>
     </div>
   )
