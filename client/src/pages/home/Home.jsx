@@ -1,6 +1,6 @@
+import React from 'react';
 import Featured from "components/featured/Featured";
 import Header from "../../components/header/Header";
-
 import "./home.css";
 import TopRated from "components/topRated/TopRated";
 import CheapestHotels from "components/cheapestHotels/CheapestHotels";
@@ -32,3 +32,4 @@ const Home = () => {
 };
 
 export default Home;
+

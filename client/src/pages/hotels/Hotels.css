@@ -1,0 +1,28 @@
+/* Hotel.css /
+
+/ Mobile Styles /
+.hotel-container {
+    padding: 20px;
+  }
+
+  / Tablet and Laptop Styles */
+  @media (min-width: 768px) {
+        .hotel-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+    
+        .carousel-container {
+          width: 100%;
+        }
+    
+        .reservation-container {
+          width: 100%;
+        }
+    
+        .rooms-container {
+          width: 100%;
+        }
+      }
+    

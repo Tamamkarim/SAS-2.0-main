@@ -1,4 +1,4 @@
-.homeContainer{
+.homeContainer {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,26 @@
   gap: 30px;
 }
 
-.homeTitle{
-  width: 1024px;
+.homeTitle {
   font-size: 20px;
+}
+
+
+@media (max-width: 767px) {
+  .homeTitle {
+    width: calc(100% - 40px); 
+    font-size: 16px; 
+  }
+}
+
+
+@media (min-width: 768px) {
+  .homeContainer {
+    max-width: 1024px;
+  }
+
+  .homeTitle {
+    width: 100%; 
+    font-size: 20px;
+  }
 }
