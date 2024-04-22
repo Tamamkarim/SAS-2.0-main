@@ -32,13 +32,7 @@ const Hotel = () => {
                 <img className='hotel-image' src={photo} alt={`Hotel ${index}`} style={{ width: '500px', height: '400px', objectFit: 'cover' }} />
               </div>
             ))}
-{/*             
-            <div style={{ width: '100%', height: '100%' }}>
-              <img src="/Pics/bedroom1.jpg" alt="Bedroom 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-            <div style={{ width: '100%', height: '100%' }}>
-              <img src="/Pics/bedroom.jpg" alt="Bedroom 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div> */}
+            
             
           </Carousel>
         </div>
