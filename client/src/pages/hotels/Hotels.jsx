@@ -1,6 +1,6 @@
 import {Spin} from "antd";
 import Header from "components/header/Header";
-import { useEffect, useState, useRef } from "react";
+import {useEffect, useState, useRef} from "react";
 import Title from "antd/es/typography/Title";
 import './Hotels.css'
 import axios from "axios";
@@ -34,22 +34,24 @@ const Hotels = () => {
 
   function HotelList({hotels}) {
     return (
-      <div className="hotels">
-        {hotels.map((hotel) => (
-          <div key={hotel.id}>
-            <h2 className="mt-8">{hotel.name}</h2>
-            <p>{hotel.type}</p>
-            <p>{hotel.city}</p>
-            <p>{hotel.desc}</p>
-            <img src={hotel.photos} alt="" className="hotel-image"/>
-            <div className="flex gap-2">
-              <p>{hotel.address}</p>
-              <p>Rooms: {hotel.rooms.length}</p>
-              <p>Rating</p>
-              <p>{hotel.rating}</p>
+      <div className="hotels-container">
+        <div className="hotels">
+          {hotels.map((hotel) => (
+            <div key={hotel.id}>
+              <h2 className="mt-8">{hotel.name}</h2>
+              <p>{hotel.type}</p>
+              <p>{hotel.city}</p>
+              <p>{hotel.desc}</p>
+              <img src={hotel.photos} alt="" className="hotel-image"/>
+              <div className="flex gap-2">
+                <p>{hotel.address}</p>
+                <p>Rooms: {hotel.rooms.length}</p>
+                <p>Rating</p>
+                <p>{hotel.rating}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     );
   }
