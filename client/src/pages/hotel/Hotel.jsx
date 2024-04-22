@@ -29,7 +29,7 @@ const Hotel = () => {
           <Carousel>
             {hotel.photos.map((photo, index) => (
               <div key={index} style={{ width: '100%', height: '100%' }}>
-                <img className='hotel-image' src={photo} alt={`Hotel ${index}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img className='hotel-image' src={photo} alt={`Hotel ${index}`} style={{ width: '500px', height: '400px', objectFit: 'cover' }} />
               </div>
             ))}
 {/*             
