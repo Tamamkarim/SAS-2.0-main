@@ -1,18 +1,21 @@
 1. Introduction:
 Dream Stay is a full-stack hotel booking website built using the MERN stack, featuring a user-friendly interface for booking reservations at various hotels.
 
-2. Technologies Used:
-Frontend:
 
+3. Technologies Used:
+   
+Frontend:
 React.js
 JavaScript
 CSS
-Backend:
 
+
+Backend:
 Node.js
 Express.js
 MongoDB
 Postman (for testing API endpoints)
+
 3. Project Structure:
 
 |                  Dream Stay                 |
@@ -69,7 +72,10 @@ Postman (for testing API endpoints)
 |            Project Goal                          |
 |            Links to documentation...             |
 +--------------------------------------------------+
+
+
 4. Installation:
+
 Clone the repository from [GitHub link].
 Navigate to the project directory.
 Install dependencies for both frontend and backend:
@@ -80,7 +86,9 @@ yarn install
 cd ../Api
 yarn start
 Ensure MongoDB is installed and running locally.
-5. Configuration:
+
+
+6. Configuration:
 Backend:
 
 MongoDB connection string: Configure in server/config/db.js.
@@ -91,24 +99,36 @@ bash
 Copy code
 cd Api
 yarn start
+
 Start the frontend server:
 bash
 Copy code
 cd client
 yarn start
 Access the website at http://localhost:3000.
+
+
 7. Features:
+
 Homepage: Displays featured hotels.
 Reservation Page: Lists available hotels.
 Reservation Form: Allows users to select dates and make reservations.
+
+
 8. API Endpoints:
+
 /hotels: GET - Retrieves a list of available hotels.
 /reservation: POST - Makes a reservation for selected dates.
+
+
 9. Future Improvements:
+
 User authentication and authorization.
 Payment integration for reservations.
 Admin panel for managing hotels and reservations.
+
 10. Conclusion:
+
 In conclusion, this MERN stack hotel booking website provides a user-friendly interface for booking hotels and making reservations. With future improvements, it can become even more robust and feature-rich.
 
 This documentation provides a structured overview of the Dream Stay hotel website, including its purpose, technologies used, project structure, installation steps, configuration options, usage instructions, features, API endpoints, potential future improvements, and a concluding note.
