@@ -18,60 +18,47 @@ Postman (for testing API endpoints)
 
 3. Project Structure:
 
-|                  Dream Stay                 |
-|                  Hotel Website              |
-+---------------------------------------------+
-|               Basic project structure       |
-|                                             |
-|                 +-----------+               |
-|                 |  App.js   |               |
-|                 +-----------+               |
-|                     |   |                   |
-|        +------------+   +-----------+       |
-|        |                        |    |       |
-|    +---v---+               +---v----+       |
-|    |fonts/ |               |index.css|       |
-|    +-------+               +---------+       |
-|        |                        |             |
-|   +----v---+               +----v-------+     |
-|   |index.js|               |index.html  |     |
-|   +--------+               +------------+     |
-|        |                                      |
-|   +----v--------+                            |
-|   |  pages/     |                            |
-|   +-------------+                            |
-|        |    |    |                            |
-|   +----v----+  +----v-------+                |
-|   | Dashboards|  | destination|               |
-|   +-----------+  +------------+               |
-|                 |            |                |
-|            +----v----+       |                |
-|            |edit_hotels|       |               |
-|            +----------+       |               |
-|            |CreateHotels|       |              |
-|            +-----------+       |              |
-|            |CreateRooms |       |              |
-|            +------------+       |              |
-|            |EditHotels  |       |              |
-|            +------------+       |              |
-|            | Login.js   |       |              |
-|            +------------+       |              |
-|            | Register.js|       |              |
-|            +------------+       |              |
-|            | VerifiedPage|       |             |
-|            +------------+       |             |
-|            | cheapestHotels|      |            |
-|            +----------------+      |            |
-|            | Footer.jsx   |        |            |
-|            +----------------+      |            |
-|            | RegistrationForm.js|   |           |
-|            +---------------------+  |           |
-|                                     |           |
-|          (more components...)      (more pages) |
-+-------------------------------------+-----------+
-|            Project Goal                          |
-|            Links to documentation...             |
-+--------------------------------------------------+
+
+├── App.js
+├── App.test.js
+├── fonts
+│   ├── InterVariable-Italic.ttf
+│
+├── index.css
+├── index.html
+├── index.js
+├── pages
+│   ├── Dashboards
+│   │     ├── edit_hotels
+│   │     └── CreateHotels.jsx
+│   │     └── CreateRooms.jsx
+          ├── EditHotels.jsx
+│   │
+
+│   │   ├── components
+│   │   │   ├── cheapestHotels.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── RegistrationForm.jsx
+
+│   │   ├── Login.js
+│   │   ├── Register.jsx
+│   │   ├── VerifiedPage.jsx
+│   │   └── VerifiedPage.module.css
+│   ├── Hotels Destination
+│   │   ├── NOrdic Nights
+│   │   ├── Baltic Breeze
+├        ── NOrdic Nights
+│   │   ├── Scandi Harbor
+│   │   ├── Nordic Haven
+│   │   ├── components
+│   │   │   ├── SearchItems.jsx
+│   │   │   ├── SearchItems.css
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Navbar.css
+│   │   │   ├── Reserve.jsx
+│   │   │   ├── Reserve.css
+│   │   ├── Home.js
+│   │   └── Home.module.css
 
 
 4. Installation:
