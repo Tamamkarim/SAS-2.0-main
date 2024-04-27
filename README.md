@@ -18,7 +18,7 @@ Postman (for testing API endpoints)
 
 3. Project Structure:
 
-
+```
 ├── App.js
 ├── App.test.js
 ├── fonts
@@ -59,7 +59,7 @@ Postman (for testing API endpoints)
 │   │   │   ├── Reserve.css
 │   │   ├── Home.js
 │   │   └── Home.module.css
-
+```
 
 4. Installation:
 
