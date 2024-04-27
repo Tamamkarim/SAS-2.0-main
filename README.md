@@ -19,46 +19,113 @@ Postman (for testing API endpoints)
 3. Project Structure:
 
 ```
-├── App.js
-├── App.test.js
-├── fonts
-│   ├── InterVariable-Italic.ttf
-│
-├── index.css
-├── index.html
-├── index.js
-├── pages
-│   ├── Dashboards
-│   │     ├── edit_hotels
-│   │     └── CreateHotels.jsx
-│   │     └── CreateRooms.jsx
-          ├── EditHotels.jsx
-│   │
+- api
+  - .env
+  - controllers
+    - auth.js
+    - hotel.js
+    - room.js
+    - user.js
+  - index.js
+  - models
+    - Hotel.js
+    - Room.js
+    - User.js
+  - package-lock.json
+  - package.json
+  - routes
+    - auth.js
+    - hotels.js
+    - rooms.js
+    - users.js
+  - utils
+    - error.js
+    - verifyToken.js
+  - yarn.lock
+- client
+  - .gitignore
+  - jsconfig.json
+  - package-lock.json
+  - package.json
+  - postcss.config.js
+  - public
+    - index.html
+  - README.md
+  - src
+    - App.js
+    - components
+      - cheapestHotels
+        - CheapestHotels.jsx
+      - featured
+        - Featured.jsx
+      - featuredProperties
+        - featuredProperties.css
+        - FeaturedProperties.jsx
+      - footer
+        - footer.css
+        - Footer.jsx
+      - header
+        - Header.jsx
+        - searchForHotels.jsx
+      - mailList
+        - mailList.css
+        - MailList.jsx
+      - navbar
+        - AuthNavbar.jsx
+        - Navbar.jsx
+      - reserve
+        - reserve.css
+        - Reserve.jsx
+      - searchItem
+        - searchItem.css
+        - SearchItem.jsx
+      - topRated
+        - TopRated.jsx
+    - context
+      - AuthContext.js
+      - HotelContext.js
+      - RoomContext.js
+      - SearchContext.js
+    - data
+      - countries.json
+      - countries_covers.json
+    - hooks
+      - useFetch.js
+    - index.css
+    - index.js
+    - pages
+      - dashboard
+        - Dashboard.jsx
+        - edit_hotels
+          - CreateHotel.jsx
+          - CreateRoom.jsx
+          - EditHotels.jsx
+      - home
+        - home.css
+        - Home.jsx
+      - hotel
+        - hotel.css
+        - Hotel.jsx
+      - hotels
+        - Hotels.css
+        - Hotels.jsx
+      - login
+        - Login.jsx
+      - profile
+        - images
+          - default-profile-img.png
+        - profile.css
+        - Profile.jsx
+      - register
+        - Register.jsx
+      - room
+        - room.jsx
+    - routes
+      - route-helpers.jsx
+  - tailwind.config.js
+  - yarn.lock
+- README.md
 
-│   │   ├── components
-│   │   │   ├── cheapestHotels.jsx
-│   │   │   ├── Footer.jsx
-│   │   │   └── RegistrationForm.jsx
-
-│   │   ├── Login.js
-│   │   ├── Register.jsx
-│   │   ├── VerifiedPage.jsx
-│   │   └── VerifiedPage.module.css
-│   ├── Hotels Destination
-│   │   ├── NOrdic Nights
-│   │   ├── Baltic Breeze
-├        ── NOrdic Nights
-│   │   ├── Scandi Harbor
-│   │   ├── Nordic Haven
-│   │   ├── components
-│   │   │   ├── SearchItems.jsx
-│   │   │   ├── SearchItems.css
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Navbar.css
-│   │   │   ├── Reserve.jsx
-│   │   │   ├── Reserve.css
-│   │   ├── Home.js
-│   │   └── Home.module.css
 ```
 
 4. Installation:
