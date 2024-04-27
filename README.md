@@ -17,8 +17,6 @@ MongoDB
 Postman (for testing API endpoints)
 
 3. Project Structure:
-
-```
 - api
   - .env
   - controllers
@@ -125,8 +123,6 @@ Postman (for testing API endpoints)
   - tailwind.config.js
   - yarn.lock
 - README.md
-
-```
 
 4. Installation:
 
