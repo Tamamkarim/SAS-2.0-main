@@ -1,0 +1,45 @@
+/* cheapestHotels.css */
+
+/* Base styles for hotel card */
+.card {
+    margin-bottom: 2rem; /* Adjust margin between cards */
+  }
+  
+  /* Base styles for hotel image */
+  .image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Base styles for hotel container */
+  .container {
+    margin: 0 auto; /* Center container horizontally */
+    padding: 0 1rem; /* Add padding for better spacing */
+  }
+  
+  /* Media query for screens smaller than 768px (mobile devices) */
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 0.5rem; /* Adjust padding for mobile size */
+    }
+  
+    .card {
+      margin-bottom: 1rem; /* Adjust margin for mobile size */
+    }
+  
+    .image {
+      max-height: 200px; /* Adjust max height for smaller screens */
+    }
+  }
+  
+  /* Media query for screens larger than 767px (tablets and above) */
+  @media (min-width: 768px) {
+    .container {
+      padding: 0 2rem; /* Adjust padding for larger screens */
+    }
+  
+    .card {
+      width: 250px; /* Set fixed width for tablet and above */
+    }
+  }
+  

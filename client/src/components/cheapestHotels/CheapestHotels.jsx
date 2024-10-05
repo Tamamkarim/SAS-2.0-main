@@ -1,13 +1,39 @@
-import { Card, Image, Badge, Rate, Carousel } from 'antd'
-import { HotelContext } from 'context/HotelContext'
-import { useContext } from 'react'
-import countries_covers from '../../data/countries_covers.json'
-import { Link } from 'react-router-dom'
-import { ArrowRightOutlined } from '@ant-design/icons'
+import { ArrowRightOutlined } from '@ant-design/icons';
+import { Badge, Card, Carousel, Image } from 'antd';
+import { HotelContext } from 'context/HotelContext';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import countries_covers from '../../data/countries_covers.json';
+import "./cheapestHotels.css";
 const { Meta } = Card
+
 
 const HotelCard = ({ hotel, loading }) => {
   let info = countries_covers.find((country) => country.name === hotel.city)
+
+  // Define styles for different screen sizes
+  const cardStyles = {
+    base: {
+      minWidth: '250px',
+      marginTop: '10px',
+      borderRadius: '0.75rem',
+    },
+    mobile: {
+      margin: '5px',
+    },
+    large: {
+      margin: '20px',
+    },
+    image: {
+      objectFit: 'cover',
+      minHeight: '350px',
+      maxHeight: '350px',
+    },
+    mobileImage: {
+      maxHeight: '200px',
+    },
+  };
+
   return (
     <Badge.Ribbon text={`${hotel.cheapestPrice} £`} className="mr-2 text-2xl">
       <Card
@@ -17,20 +43,26 @@ const HotelCard = ({ hotel, loading }) => {
             <ArrowRightOutlined key="more"></ArrowRightOutlined>
           </Link>,
         ]}
-        className="min-w-[250px] my-10 rounded-t-3xl"
+        style={{
+          ...cardStyles.base,
+          ...window.innerWidth <= 767 ? cardStyles.mobile : cardStyles.large,
+        }}
         hoverable
         cover={
           <Image
             alt=""
             src={info?.cover}
-            className="object-cover min-h-[350px] max-h-[350px]"
+            style={{
+              ...cardStyles.image,
+              ...window.innerWidth <= 767 ? cardStyles.mobileImage : null,
+            }}
           />
         }
       >
         <Meta title={hotel.name} description={hotel.desc} />
       </Card>
     </Badge.Ribbon>
-  )
+  );
 }
 
 const CheapestHotels = () => {
@@ -49,4 +81,4 @@ const CheapestHotels = () => {
   )
 }
 
-export default CheapestHotels
+export default CheapestHotels;

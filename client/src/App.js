@@ -1,20 +1,20 @@
+import { ConfigProvider, Layout } from "antd";
+import Profile from "pages/profile/Profile";
 import {
   BrowserRouter,
-  Routes,
   Route,
+  Routes,
 } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import Dashboard from "./pages/dashboard/Dashboard";
+import EditHotels from "./pages/dashboard/edit_hotels/EditHotels";
 import Home from "./pages/home/Home";
 import Hotel from "./pages/hotel/Hotel";
 import Hotels from "./pages/hotels/Hotels";
 import Login from "./pages/login/Login";
-import Register from "./pages/register/Register"
-import { ConfigProvider, Layout } from "antd";
-import Navbar from "./components/navbar/Navbar";
-import Profile from "pages/profile/Profile";
-import Dashboard from "./pages/dashboard/Dashboard";
-import { ProtectedRoute, PublicRoute } from "./routes/route-helpers";
-import EditHotels from "./pages/dashboard/edit_hotels/EditHotels";
+import Register from "./pages/register/Register";
 import Room from "./pages/room/room";
+import { ProtectedRoute, PublicRoute } from "./routes/route-helpers";
 
 const { Content, Footer } = Layout;
 
@@ -43,7 +43,7 @@ function App() {
             </Routes>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            SAS ©{new Date().getFullYear()} Created by Tamam.
+            SAS ©{new Date().getFullYear()} Created by Arslan.
           </Footer>
         </Layout>
       </ConfigProvider>

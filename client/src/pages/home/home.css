@@ -4,10 +4,12 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  max-width: 1024px; /* Set a maximum width for laptop size */
 }
 
 .homeTitle {
   font-size: 20px;
+  width: calc(100% - 40px); /* Adjust width for mobile size */
 }
 
 
@@ -20,12 +22,8 @@
 
 
 @media (min-width: 768px) {
-  .homeContainer {
-    max-width: 1024px;
-  }
-
   .homeTitle {
-    width: 100%; 
-    font-size: 20px;
+    font-size: 24px; /* Increase font size for laptop size */
+    width: 100%; /* Reset width for laptop size */
   }
 }
